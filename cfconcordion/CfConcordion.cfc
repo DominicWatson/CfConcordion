@@ -46,11 +46,11 @@
 			// due to memory leak issues
 			if( not StructKeyExists( server, '_cfConcordionJavaLoader') ){
 
-				jarPaths[1]  = ExpandPath( '/org/cfconcordion/lib/concordion/concordion-1.4.2.jar');
-				jarPaths[2]  = ExpandPath( '/org/cfconcordion/lib/concordion/lib/xom-1.2.5.jar');
-				jarPaths[3]  = ExpandPath( '/org/cfconcordion/lib/concordion/lib/ognl-2.6.9.jar');
-				jarPaths[4]  = ExpandPath( '/org/cfconcordion/lib/concordion/lib/junit-4.8.2.jar');
-				jarPaths[5]  = ExpandPath( '/org/cfconcordion/lib/javaloader/support/cfcdynamicproxy/lib/cfcdynamicproxy.jar');
+				jarPaths[1]  = ExpandPath( '/cfconcordion/lib/concordion/concordion-1.4.2.jar');
+				jarPaths[2]  = ExpandPath( '/cfconcordion/lib/concordion/lib/xom-1.2.5.jar');
+				jarPaths[3]  = ExpandPath( '/cfconcordion/lib/concordion/lib/ognl-2.6.9.jar');
+				jarPaths[4]  = ExpandPath( '/cfconcordion/lib/concordion/lib/junit-4.8.2.jar');
+				jarPaths[5]  = ExpandPath( '/cfconcordion/lib/javaloader/support/cfcdynamicproxy/lib/cfcdynamicproxy.jar');
 
 				server['_cfConcordionJavaLoader'] = CreateObject('component', 'lib.javaloader.JavaLoader').init( loadPaths = jarPaths, loadColdFusionClassPath = true );
 			}
@@ -145,10 +145,10 @@
 		<cfreturn _javaLoader />
 	</cffunction>
 
-	<cffunction name="getJavaLibPaths" access="private" returntype="array" output="false">
+	<cffunction name="_getJavaLibPaths" access="private" returntype="array" output="false">
 		<cfreturn _javaLibPaths>
 	</cffunction>
-	<cffunction name="setJavaLibPaths" access="private" returntype="void" output="false">
+	<cffunction name="_setJavaLibPaths" access="private" returntype="void" output="false">
 		<cfargument name="JavaLibPaths" type="array" required="true" />
 		<cfset _javaLibPaths = arguments.JavaLibPaths />
 	</cffunction>
