@@ -1,0 +1,17 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+    <head>
+        <title>Simple Assertion Command Testing</title>
+    </head>
+    <body>
+        <h1>Simple Assertion Command Testing</h1>
+
+        <p>I test the assertion commands of Concordion work using CfConcordion</p>
+
+        <div class="example">
+            <h3>Example</h3>
+
+            <p> The getSimpleValue() method should return the string: <span concordion:assertEquals="getSimpleValue()">Simple Value</span> </p>
+            <p> Method calls to getter functions should also work without the need for get. So result should still be <span concordion:assertEquals="simpleValue">Simple Value</span> </p>
+        </div>
+    </body>
+</html>
