@@ -7,6 +7,7 @@
 			var resultMessage = "Concordion test ran with #result.getExceptionCount()# exceptions, #result.getFailureCount()# failures and #result.getSuccessCount()# successes.";
 			var failed        = result.getExceptionCount() OR result.getFailureCount();
 
+			super.debug( resultMessage );
 			super.assertFalse( failed, resultMessage );
 		</cfscript>
 	</cffunction>
